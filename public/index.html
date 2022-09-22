@@ -1,0 +1,60 @@
+<html>
+
+<head>
+  <title>URL Bookmarks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/javascripts/services.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>URL Bookmarks</h1>
+  </header>
+
+  <main class="two-col">
+    <section id="operations-container">
+      <h2>Request:</h2>
+
+      <div class="scrollbox">
+
+        <form id="list-all">
+          <h3>List All Bookmarks</h3>
+          <input type="submit" value="List Bookmarks">
+        </form>
+
+        <form id="add-one">
+          <h3>Create a Bookmark</h3>
+          <div>
+            <label for="name">Bookmark Name:</label>
+            <input id="name" name="name">
+          </div>
+          <div>
+            <label for="url">URL:</label>
+            <input id="url" name="url">
+          </div>
+          <input type="submit" value="Bookmarke the URL">
+        </form>
+
+        <form id="delete-one">
+          <h3>Delete a Bookmark</h3>
+          <div>
+            <label for="name">Bookmark Name:</label>
+            <input id="name" name="name">
+          </div>
+          <input type="submit" value="Delete the Bookmark">
+        </form>
+
+      </div>
+    </section>
+    <section>
+      <h2>Response:</h2>
+      <div class="scrollbox">
+        <pre id="response" class="teletype"></pre>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
