@@ -18,40 +18,40 @@ const router = express.Router();
 /**
  * Create a Bookmark.
  * 
- * @name POST /api/bookmarks
+ * @name POST TODO1-1: RESTful API endpoint
  * 
  * @param {string} name - name of Bookmark (link will be /:Bookmark)
  * @param {string} url - link Bookmark points to
  * @return {Bookmark} - the created Bookmark
- * @throws {400} - if name is already taken
+ * @throws {TODO1-2: Response Status} - if name is already taken
  */
-router.post('/', (req, res) => {
+router.post('TODO1-1: RESTful API endpoint', (req, res) => {
   if (Bookmarks.findOne(req.body.name) !== undefined) {
-    res.status(400).json({
+    res.status(/* TODO1-2: Response Status */).json({
       error: `Bookmark ${req.body.name} already exists.`,
     }).end();
   } else {
     const Bookmark = Bookmarks.addOne(req.body.name, req.body.url); 
-    res.status(200).json(Bookmark).end();
+    res.status(/* TODO1-3: Response Status */).json(Bookmark).end();
   }
 });
 
 /**
  * Delete a Bookmark.
  * 
- * @name DELETE /api/bookmarks/:name
+ * @name DELETE TODO2-1: RESTful API endpoint
  * 
  * @return {Bookmark} - the deleted Bookmark
- * @throws {404} - if Bookmark does not exist
+ * @throws {TODO2-2: Response Status} - if Bookmark does not exist
  */
-router.delete('/:name?', (req, res) => {
+router.delete('TODO2-2: Response Status', (req, res) => {
   if (Bookmarks.findOne(req.params.name) === undefined) {
-    res.status(404).json({
+    res.status(/* TODO2-2: Response Status */).json({
       error: `Bookmark URL ${req.params.name} does not exist.`,
     }).end();
   } else {
     const Bookmark = Bookmarks.deleteOne(req.params.name);
-    res.status(200).json(Bookmark).end();
+    res.status(/* TODO2-3: Response Status */).json(Bookmark).end();
   }
 });
 

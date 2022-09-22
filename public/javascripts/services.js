@@ -45,13 +45,13 @@ function listAll(fields) {
 }
 
 function addOne(fields) {
-  axios.post('/api/bookmarks/', fields)
+  axios.post('TODO1-1: RESTful API endpoint', fields)
     .then(showResponse)
     .catch(showResponse);
 }
 
 function deleteOne(fields) {
-  axios.delete('/api/bookmarks/' + fields.name, fields)
+  axios.delete(`TODO2-2: Response Status - You can include the input like this ${fields.name}`, fields)
     .then(showResponse)
     .catch(showResponse);
 }
