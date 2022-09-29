@@ -39,7 +39,7 @@ function showResponse(axiosResponse) {
  */
 
 function listAll(fields) {
-  axios.get('/api/bookmarks/')
+  axios.get('/bookmarks/')
     .then(showResponse)
     .catch(showResponse);
 }
