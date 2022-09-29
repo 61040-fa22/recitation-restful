@@ -7,11 +7,11 @@ const router = express.Router();
 /**
  * List all Bookmarks.
  * 
- * @name GET /api/bookmarks
+ * @name GET /bookmarks
  * 
  * @return {Bookmark[]} - list of all stored Bookmarks
  */
- router.get('/', (req, res) => {
+ router.get('/bookmarks', (req, res) => {
   res.status(200).json(Bookmarks.findAll()).end();
 });
 
