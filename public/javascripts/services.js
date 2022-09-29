@@ -45,6 +45,7 @@ function listAll(fields) {
 }
 
 function addOne(fields) {
+  // TODO1: Design a RESTful endpoint for creating a bookmark
   // TODO2: Change the "get" below to the proper method
   axios.get('TODO1: RESTful API endpoint URL', fields) 
     .then(showResponse)
@@ -52,6 +53,7 @@ function addOne(fields) {
 }
 
 function deleteOne(fields) {
+  // TODO5: Design a RESTful endpoint for deleting a bookmark
   // TODO6: Change the "get" below to the proper method
   axios.get(`TODO5: RESTful API endpoint URL - You can include the input like this ${fields.name}`, fields)
     .then(showResponse)

@@ -18,7 +18,7 @@ const router = express.Router();
 /**
  * Create a Bookmark.
  * 
- * @name POST TODO1-1: RESTful API endpoint
+ * @name GET TODO1: RESTful API endpoint
  * 
  * @param {string} name - name of Bookmark (link will be /:Bookmark)
  * @param {string} url - link Bookmark points to
@@ -40,7 +40,7 @@ router.get('TODO1: RESTful API endpoint (URL)', (req, res) => {
 /**
  * Delete a Bookmark.
  * 
- * @name DELETE TODO5: RESTful API endpoint
+ * @name GET TODO5: RESTful API endpoint
  * 
  * @return {Bookmark} - the deleted Bookmark
  * @throws {404} - if Bookmark does not exist
