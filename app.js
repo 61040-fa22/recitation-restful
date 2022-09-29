@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect url hierarchies to our routers
 app.use('/', indexRouter);
-app.use('/api/bookmarks/', bookmarksRouter);
+app.use('/', bookmarksRouter);
 
 // Catch all other routes into a meaningful error message
 app.all('*', (req, res) => {
