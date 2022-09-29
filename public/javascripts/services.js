@@ -45,13 +45,15 @@ function listAll(fields) {
 }
 
 function addOne(fields) {
-  axios.post('TODO1-1: RESTful API endpoint', fields)
+  // TODO2: Change the "get" below to the proper method
+  axios.get('TODO1: RESTful API endpoint URL', fields) 
     .then(showResponse)
     .catch(showResponse);
 }
 
 function deleteOne(fields) {
-  axios.delete(`TODO2-2: Response Status - You can include the input like this ${fields.name}`, fields)
+  // TODO6: Change the "get" below to the proper method
+  axios.get(`TODO5: RESTful API endpoint URL - You can include the input like this ${fields.name}`, fields)
     .then(showResponse)
     .catch(showResponse);
 }
